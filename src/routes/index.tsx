@@ -221,7 +221,7 @@ function Landing() {
           </Reveal>
           <Reveal delay={240}>
             <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <EnrollButton size="lg" label="Join Live Mentorship" className="w-full sm:w-auto" />
+              <EnrollButton size="lg" label="Get Course" className="w-full sm:w-auto" />
               <a
                 href="#curriculum"
                 className="inline-flex w-full items-center justify-center rounded-full border border-border px-8 py-4 text-base font-semibold transition-colors hover:bg-accent sm:w-auto"
@@ -423,7 +423,7 @@ function Landing() {
           </Reveal>
           <Reveal delay={120}>
             <div className="h-full surface-card glow-ring p-8">
-              <h3 className="text-xl font-semibold">Our Mentorship</h3>
+              <h3 className="text-xl font-semibold">Our Course</h3>
               <ul className="mt-6 space-y-4">
                 {[
                   "AI Powered",
