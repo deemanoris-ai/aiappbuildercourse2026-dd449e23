@@ -197,7 +197,7 @@ function Landing() {
           aria-hidden="true"
           width={1536}
           height={1024}
-          className="pointer-events-none absolute inset-0 -z-10 h-full w-full scale-110 object-cover opacity-35 blur-xl"
+          className="pointer-events-none absolute inset-0 -z-10 h-full w-full scale-110 object-cover opacity-10 blur-2xl"
         />
         <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_50%_0%,color-mix(in_oklab,var(--primary)_22%,transparent),transparent)]" />
         <div className="mx-auto max-w-4xl text-center">
