@@ -1,7 +1,8 @@
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 
-export const COURSE_PRICE_INR = 199;
+
+
 
 export const createRazorpayOrder = createServerFn({ method: "POST" }).handler(async () => {
   const keyId = process.env["RAZORPAY_KEY_ID"];
