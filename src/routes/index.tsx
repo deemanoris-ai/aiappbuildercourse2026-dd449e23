@@ -118,33 +118,33 @@ const audience = [
   "Anyone who wants to learn AI-powered app development",
 ];
 
-const modules = [
-  ["Module 1", "Introduction"],
-  ["Module 2", "Using AI to Build Apps"],
-  ["Module 3", "Design Beautiful Interfaces"],
-  ["Module 4", "Publishing to Play Store"],
-  ["Module 5", "Subscriptions & Payments"],
-  ["Module 6", "Ads & Monetization"],
-  ["Module 7", "Client Projects"],
-  ["Module 8", "Growing with AI"],
+const modules: { num: string; title: string }[] = [
+  { num: "Module 1", title: "Introduction" },
+  { num: "Module 2", title: "Using AI to Build Apps" },
+  { num: "Module 3", title: "Design Beautiful Interfaces" },
+  { num: "Module 4", title: "Publishing to Play Store" },
+  { num: "Module 5", title: "Subscriptions & Payments" },
+  { num: "Module 6", title: "Ads & Monetization" },
+  { num: "Module 7", title: "Client Projects" },
+  { num: "Module 8", title: "Growing with AI" },
 ];
 
-const faqs = [
-  ["Can beginners join?", "Yes. The course starts from the basics and assumes no prior experience."],
-  ["Do I need coding knowledge?", "No. Every concept is taught using AI-powered, no-code workflows."],
-  ["Will I build real apps?", "Yes. You build working Android apps as you move through the modules."],
-  ["Is mentorship live?", "Yes. You get live 1-to-1 guidance throughout the learning process."],
-  [
-    "Will I receive future updates?",
-    "You get lifetime access to the course material. Whenever a module is updated, the updated version is available inside your existing access.",
-  ],
+const faqs: { q: string; a: string }[] = [
+  { q: "Can beginners join?", a: "Yes. The course starts from the basics and assumes no prior experience." },
+  { q: "Do I need coding knowledge?", a: "No. Every concept is taught using AI-powered, no-code workflows." },
+  { q: "Will I build real apps?", a: "Yes. You build working Android apps as you move through the modules." },
+  { q: "Is mentorship live?", a: "Yes. You get live 1-to-1 guidance throughout the learning process." },
+  {
+    q: "Will I receive future updates?",
+    a: "You get lifetime access to the course material. Whenever a module is updated, the updated version is available inside your existing access.",
+  },
 ];
 
-const navLinks = [
-  ["Curriculum", "#curriculum"],
-  ["What You Learn", "#learn"],
-  ["Bonuses", "#bonuses"],
-  ["FAQ", "#faq"],
+const navLinks: { label: string; href: string }[] = [
+  { label: "Curriculum", href: "#curriculum" },
+  { label: "What You Learn", href: "#learn" },
+  { label: "Bonuses", href: "#bonuses" },
+  { label: "FAQ", href: "#faq" },
 ];
 
 function Landing() {
@@ -175,7 +175,7 @@ function Landing() {
             </span>
           </a>
           <div className="hidden items-center gap-7 lg:flex">
-            {navLinks.map(([label, href]) => (
+            {navLinks.map(({ label, href }) => (
               <a
                 key={href}
                 href={href}
@@ -386,7 +386,7 @@ function Landing() {
           text="A structured path from your first app to client-ready delivery."
         />
         <div className="mt-12 grid gap-4 sm:grid-cols-2">
-          {modules.map(([num, title], i) => (
+          {modules.map(({ num, title }, i) => (
             <Reveal key={num} delay={(i % 2) * 80}>
               <div className="flex items-center gap-5 rounded-2xl border border-border p-5 transition-colors hover:border-primary/40 glass">
                 <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-[image:var(--gradient-primary)] font-display text-base font-bold text-primary-foreground">
@@ -454,7 +454,7 @@ function Landing() {
         <SectionHead eyebrow="Questions" title="Frequently Asked" />
         <Reveal>
           <Accordion type="single" collapsible className="mt-10 w-full">
-            {faqs.map(([q, a]) => (
+            {faqs.map(({ q, a }) => (
               <AccordionItem key={q} value={q} className="border-border">
                 <AccordionTrigger className="text-left text-base font-semibold hover:no-underline">
                   {q}
