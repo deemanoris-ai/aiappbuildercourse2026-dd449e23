@@ -56,16 +56,16 @@ export const Route = createFileRoute("/")({
 
 const proofPoints = [
   "Beginner Friendly",
-  "Live 1-to-1 Mentorship",
+  "Complete Mentorship",
   "Lifetime Course Access",
-  "Free Bonus Courses",
+  "Free Meta ads Course",
   "Community Support",
 ];
 
 const learnItems = [
   { icon: Smartphone, title: "Build Android Apps using AI", text: "Go from an idea to a working app with modern AI tooling." },
   { icon: Globe, title: "Convert Websites into Apps", text: "Turn existing web experiences into installable Android apps." },
-  { icon: UploadCloud, title: "Publish on Google Play Store", text: "Prepare listings, assets and releases the right way." },
+  { icon: UploadCloud, title: "Publish on Google Play Store", text: "Prepare listings, assets, releases and start your income journey!" },
   { icon: Repeat, title: "Add Subscriptions inside Apps", text: "Set up recurring plans and manage access inside your app." },
   { icon: BadgeIndianRupee, title: "Build Paid Apps", text: "Structure one-time purchase apps and price them sensibly." },
   { icon: Megaphone, title: "Integrate Ads for Monetization", text: "Place ad formats without ruining the user experience." },
@@ -204,7 +204,7 @@ function Landing() {
           <Reveal>
             <span className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-1.5 text-xs font-medium tracking-wide text-muted-foreground glass">
               <Video className="h-3.5 w-3.5 text-primary-glow" />
-              Live mentorship included
+              Complete Mentorship included
             </span>
           </Reveal>
           <Reveal delay={80}>
@@ -313,9 +313,9 @@ function Landing() {
             <div className="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full bg-[image:var(--gradient-primary)] opacity-20 blur-3xl" />
             <span className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-1.5 text-xs font-medium text-muted-foreground">
               <Video className="h-3.5 w-3.5 text-primary-glow" />
-              Live Mentorship
+              Complete Mentorship
             </span>
-            <h2 className="mt-6 max-w-2xl text-3xl font-bold sm:text-4xl">Live 1-to-1 Guidance</h2>
+            <h2 className="mt-6 max-w-2xl text-3xl font-bold sm:text-4xl">24/7 Guidance by Founder himself.</h2>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {[
                 "You'll receive personal guidance throughout the learning process.",
@@ -428,7 +428,7 @@ function Landing() {
                 {[
                   "AI Powered",
                   "Beginner Friendly",
-                  "Live Guidance",
+                  "Full Practical Guidance",
                   "Practical Projects",
                   "Real App Building",
                   "Modern Workflow",
@@ -478,7 +478,7 @@ function Landing() {
               Ready to Build Your First Android App?
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-base text-muted-foreground">
-              Start learning with live mentorship and gain practical AI app development skills.
+              Start learning with the course and gain practical AI app development skills.
             </p>
             <div className="mt-9 flex flex-col items-center gap-3">
               <EnrollButton size="lg" className="w-full sm:w-auto" />
@@ -525,7 +525,7 @@ function Landing() {
         <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3">
           <div className="min-w-0">
             <p className="truncate text-sm font-semibold">₹{COURSE_PRICE_INR} · Lifetime access</p>
-            <p className="truncate text-xs text-muted-foreground">Live 1-to-1 mentorship included</p>
+            <p className="truncate text-xs text-muted-foreground">Complete Mentorship included</p>
           </div>
           <EnrollButton />
         </div>
