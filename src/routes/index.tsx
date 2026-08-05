@@ -18,6 +18,7 @@ import {
   BadgeIndianRupee,
   Megaphone,
   Sparkles,
+  Star,
   Briefcase,
   Building2,
   RefreshCw,
@@ -39,13 +40,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Learn to build, publish and monetize Android apps using AI tools with live 1-to-1 mentorship. Lifetime access, bonus courses and resources for ₹199.",
+          "Learn to build, publish and monetize Android apps using AI tools with live 1-to-1 mentorship. Lifetime access, bonus courses and resources for ₹299.",
       },
       { property: "og:title", content: "AI App Builder Course — Build Android Apps with AI" },
       {
         property: "og:description",
         content:
-          "Step-by-step AI app building with live mentorship, lifetime access and free bonus courses. Enroll for ₹199.",
+          "Step-by-step AI app building with live mentorship, lifetime access and free bonus courses. Enroll for ₹299.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -251,6 +252,28 @@ function Landing() {
         </div>
       </section>
 
+      {/* What you will learn */}
+      <Section id="learn">
+        <SectionHead
+          eyebrow="Curriculum outcomes"
+          title="What You Will Learn"
+          text="A complete, practical workflow for building and shipping Android apps with AI."
+        />
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {learnItems.map((item, i) => (
+            <Reveal key={item.title} delay={(i % 3) * 80}>
+              <div className="group h-full surface-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40">
+                <span className="grid h-11 w-11 place-items-center rounded-2xl bg-[image:var(--gradient-primary)]">
+                  <item.icon className="h-5 w-5 text-primary-foreground" />
+                </span>
+                <h3 className="mt-5 text-base font-semibold">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </Section>
+
       {/* Why this course */}
       <Section id="why">
         <Reveal>
@@ -284,26 +307,19 @@ function Landing() {
         </div>
       </Section>
 
-      {/* What you will learn */}
-      <Section id="learn">
-        <SectionHead
-          eyebrow="Curriculum outcomes"
-          title="What You Will Learn"
-          text="A complete, practical workflow for building and shipping Android apps with AI."
-        />
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {learnItems.map((item, i) => (
-            <Reveal key={item.title} delay={(i % 3) * 80}>
-              <div className="group h-full surface-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40">
-                <span className="grid h-11 w-11 place-items-center rounded-2xl bg-[image:var(--gradient-primary)]">
-                  <item.icon className="h-5 w-5 text-primary-foreground" />
-                </span>
-                <h3 className="mt-5 text-base font-semibold">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
+      {/* Double refund guarantee */}
+      <Section id="guarantee">
+        <Reveal>
+          <div className="surface-card relative overflow-hidden p-8 text-center sm:p-12">
+            <div className="pointer-events-none absolute inset-x-0 -top-32 h-64 bg-[radial-gradient(50%_100%_at_50%_100%,color-mix(in_oklab,var(--primary)_35%,transparent),transparent)]" />
+            <Star className="mx-auto h-8 w-8 text-primary-glow" />
+            <h2 className="mt-6 text-3xl font-bold sm:text-5xl">Double Refund Guarantee</h2>
+            <p className="mx-auto mt-5 max-w-2xl text-base text-muted-foreground">
+              Build and launch a real app within your first 3 months. If you don't feel the course
+              delivered value, we'll refund 2x your investment — no questions asked.
+            </p>
+          </div>
+        </Reveal>
       </Section>
 
       {/* Live mentorship */}
@@ -519,6 +535,13 @@ function Landing() {
           specific results. Outcomes depend on individual effort and application.
         </p>
       </footer>
+
+      {/* Footer note */}
+      <div className="border-t border-border px-5 py-5">
+        <p className="mx-auto max-w-6xl text-center text-xs leading-relaxed text-muted-foreground">
+          *Only applicable if you build and launch a product within your first 3 months.
+        </p>
+      </div>
 
       {/* Sticky mobile CTA */}
       <div className="fixed inset-x-0 bottom-0 z-50 border-t border-border p-3 md:hidden glass">
