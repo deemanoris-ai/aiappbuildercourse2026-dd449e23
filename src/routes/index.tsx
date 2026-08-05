@@ -18,6 +18,7 @@ import {
   BadgeIndianRupee,
   Megaphone,
   Sparkles,
+  Star,
   Briefcase,
   Building2,
   RefreshCw,
@@ -39,13 +40,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Learn to build, publish and monetize Android apps using AI tools with live 1-to-1 mentorship. Lifetime access, bonus courses and resources for ₹199.",
+          "Learn to build, publish and monetize Android apps using AI tools with live 1-to-1 mentorship. Lifetime access, bonus courses and resources for ₹299.",
       },
       { property: "og:title", content: "AI App Builder Course — Build Android Apps with AI" },
       {
         property: "og:description",
         content:
-          "Step-by-step AI app building with live mentorship, lifetime access and free bonus courses. Enroll for ₹199.",
+          "Step-by-step AI app building with live mentorship, lifetime access and free bonus courses. Enroll for ₹299.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
