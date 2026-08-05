@@ -252,6 +252,28 @@ function Landing() {
         </div>
       </section>
 
+      {/* What you will learn */}
+      <Section id="learn">
+        <SectionHead
+          eyebrow="Curriculum outcomes"
+          title="What You Will Learn"
+          text="A complete, practical workflow for building and shipping Android apps with AI."
+        />
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {learnItems.map((item, i) => (
+            <Reveal key={item.title} delay={(i % 3) * 80}>
+              <div className="group h-full surface-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40">
+                <span className="grid h-11 w-11 place-items-center rounded-2xl bg-[image:var(--gradient-primary)]">
+                  <item.icon className="h-5 w-5 text-primary-foreground" />
+                </span>
+                <h3 className="mt-5 text-base font-semibold">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </Section>
+
       {/* Why this course */}
       <Section id="why">
         <Reveal>
@@ -285,26 +307,19 @@ function Landing() {
         </div>
       </Section>
 
-      {/* What you will learn */}
-      <Section id="learn">
-        <SectionHead
-          eyebrow="Curriculum outcomes"
-          title="What You Will Learn"
-          text="A complete, practical workflow for building and shipping Android apps with AI."
-        />
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {learnItems.map((item, i) => (
-            <Reveal key={item.title} delay={(i % 3) * 80}>
-              <div className="group h-full surface-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40">
-                <span className="grid h-11 w-11 place-items-center rounded-2xl bg-[image:var(--gradient-primary)]">
-                  <item.icon className="h-5 w-5 text-primary-foreground" />
-                </span>
-                <h3 className="mt-5 text-base font-semibold">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
+      {/* Double refund guarantee */}
+      <Section id="guarantee">
+        <Reveal>
+          <div className="surface-card relative overflow-hidden p-8 text-center sm:p-12">
+            <div className="pointer-events-none absolute inset-x-0 -top-32 h-64 bg-[radial-gradient(50%_100%_at_50%_100%,color-mix(in_oklab,var(--primary)_35%,transparent),transparent)]" />
+            <Star className="mx-auto h-8 w-8 text-primary-glow" />
+            <h2 className="mt-6 text-3xl font-bold sm:text-5xl">Double Refund Guarantee</h2>
+            <p className="mx-auto mt-5 max-w-2xl text-base text-muted-foreground">
+              Build and launch a real app within your first 3 months. If you don't feel the course
+              delivered value, we'll refund 2x your investment — no questions asked.
+            </p>
+          </div>
+        </Reveal>
       </Section>
 
       {/* Live mentorship */}
