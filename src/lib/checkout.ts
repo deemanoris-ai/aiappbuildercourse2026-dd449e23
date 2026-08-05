@@ -1,6 +1,6 @@
 import { createRazorpayOrder, verifyRazorpayPayment } from "./razorpay.functions";
 
-export const COURSE_PRICE_INR = 299;
+export const COURSE_PRICE_INR = 499;
 
 declare global {
   interface Window {
