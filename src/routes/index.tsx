@@ -214,6 +214,12 @@ function Landing() {
               <span className="mt-2 block text-gradient">No Coding Required.</span>
             </h1>
           </Reveal>
+          <Reveal delay={120}>
+            <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-border px-4 py-1.5 text-sm font-medium text-foreground glass">
+              <Star className="h-4 w-4 fill-primary text-primary" />
+              <span>351+ students enrolled</span>
+            </div>
+          </Reveal>
           <Reveal delay={160}>
             <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
               Learn step-by-step how to build, publish and monetize Android apps using AI tools—even
