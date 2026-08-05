@@ -536,6 +536,13 @@ function Landing() {
         </p>
       </footer>
 
+      {/* Footer note */}
+      <div className="border-t border-border px-5 py-5">
+        <p className="mx-auto max-w-6xl text-center text-xs leading-relaxed text-muted-foreground">
+          *Only applicable if you build and launch a product within your first 3 months.
+        </p>
+      </div>
+
       {/* Sticky mobile CTA */}
       <div className="fixed inset-x-0 bottom-0 z-50 border-t border-border p-3 md:hidden glass">
         <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3">
