@@ -280,6 +280,21 @@ function Landing() {
         </div>
       </Section>
 
+      {/* Double refund guarantee */}
+      <Section id="guarantee">
+        <Reveal>
+          <div className="surface-card relative overflow-hidden p-8 text-center sm:p-12">
+            <div className="pointer-events-none absolute inset-x-0 -top-32 h-64 bg-[radial-gradient(50%_100%_at_50%_100%,color-mix(in_oklab,var(--primary)_35%,transparent),transparent)]" />
+            <Star className="mx-auto h-8 w-8 text-primary-glow" />
+            <h2 className="mt-6 text-3xl font-bold sm:text-5xl">Double Refund Guarantee</h2>
+            <p className="mx-auto mt-5 max-w-2xl text-base text-muted-foreground">
+              Build and launch a real app within your first 3 months. If you don't feel the course
+              delivered value, we'll refund 2x your investment — no questions asked*.
+            </p>
+          </div>
+        </Reveal>
+      </Section>
+
       {/* Why this course */}
       <Section id="why">
         <Reveal>
@@ -288,7 +303,7 @@ function Landing() {
             <span className="block text-gradient">Start Building Real Apps.</span>
           </h2>
         </Reveal>
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
+        <div className="mt-10 grid gap-5 md:grid-cols:3">
           {[
             {
               title: "No experience needed",
@@ -311,21 +326,6 @@ function Landing() {
             </Reveal>
           ))}
         </div>
-      </Section>
-
-      {/* Double refund guarantee */}
-      <Section id="guarantee">
-        <Reveal>
-          <div className="surface-card relative overflow-hidden p-8 text-center sm:p-12">
-            <div className="pointer-events-none absolute inset-x-0 -top-32 h-64 bg-[radial-gradient(50%_100%_at_50%_100%,color-mix(in_oklab,var(--primary)_35%,transparent),transparent)]" />
-            <Star className="mx-auto h-8 w-8 text-primary-glow" />
-            <h2 className="mt-6 text-3xl font-bold sm:text-5xl">Double Refund Guarantee</h2>
-            <p className="mx-auto mt-5 max-w-2xl text-base text-muted-foreground">
-              Build and launch a real app within your first 3 months. If you don't feel the course
-              delivered value, we'll refund 2x your investment — no questions asked*.
-            </p>
-          </div>
-        </Reveal>
       </Section>
 
       {/* Live mentorship */}
