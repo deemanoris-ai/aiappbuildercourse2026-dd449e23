@@ -56,11 +56,11 @@ export const Route = createFileRoute("/")({
 });
 
 const proofPoints = [
-  "Beginner Friendly",
-  "Complete Mentorship",
+  "Beginner Friendly Course in Hindi",
+  "Complete Guidence",
   "Lifetime Course Access",
   "Free Meta ads Course",
-  "Community Support",
+  "Focused on making consistent income ",
 ];
 
 const learnItems = [
@@ -134,7 +134,7 @@ const faqs: { q: string; a: string }[] = [
   { q: "Can beginners join?", a: "Yes. The course starts from the basics and assumes no prior experience." },
   { q: "Do I need coding knowledge?", a: "No. Every concept is taught using AI-powered, no-code workflows." },
   { q: "Will I build real apps?", a: "Yes. You build working Android apps as you move through the modules." },
-  { q: "Is mentorship live?", a: "Yes. You get live 1-to-1 guidance throughout the learning process." },
+  { q: "Is mentorship on a course?", a: "Yes. You get live 1-to-1 guidance throughout the learning process." },
   {
     q: "Will I receive future updates?",
     a: "You get lifetime access to the course material. Whenever a module is updated, the updated version is available inside your existing access.",
@@ -257,7 +257,7 @@ function Landing() {
         <SectionHead
           eyebrow="Curriculum outcomes"
           title="What You Will Learn"
-          text="A complete, practical workflow for building and shipping Android apps with AI."
+          text="See What Things Are Included in Your Course!"
         />
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {learnItems.map((item, i) => (
@@ -289,7 +289,7 @@ function Landing() {
               text: "You don't need coding experience or a technical background. Every step is explained from scratch in plain language.",
             },
             {
-              title: "Practical, not theoretical",
+              title: "Everything Practical, not theoretical",
               text: "You build real Android apps as you learn, instead of collecting scattered tutorials you never apply.",
             },
             {
@@ -316,7 +316,7 @@ function Landing() {
             <h2 className="mt-6 text-3xl font-bold sm:text-5xl">Double Refund Guarantee</h2>
             <p className="mx-auto mt-5 max-w-2xl text-base text-muted-foreground">
               Build and launch a real app within your first 3 months. If you don't feel the course
-              delivered value, we'll refund 2x your investment — no questions asked.
+              delivered value, we'll refund 2x your investment — no questions asked*.
             </p>
           </div>
         </Reveal>
