@@ -8,6 +8,8 @@ import {
 } from "@/components/ui/accordion";
 import { EnrollButton } from "@/components/EnrollButton";
 import { Reveal } from "@/components/Reveal";
+import { StudentFeedback } from "@/components/StudentFeedback";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { COURSE_PRICE_INR } from "@/lib/checkout";
 import { trackMeta } from "@/lib/meta-tracking";
 
@@ -42,13 +44,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Learn to build, publish and monetize Android apps using AI tools with live 1-to-1 mentorship. Lifetime access, bonus courses and resources for ₹1999.",
+          "Learn to build, publish and monetize Android apps using AI tools with complete guidance. Lifetime access, bonus courses and resources for ₹199.",
       },
       { property: "og:title", content: "AI App Builder Course — Build Android Apps with AI" },
       {
         property: "og:description",
         content:
-          "Step-by-step AI app building with live mentorship, lifetime access and free bonus courses. Enroll for ₹1999.",
+          "Step-by-step AI app building with complete guidance, lifetime access and free bonus courses. Enroll for ₹199.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -59,7 +61,7 @@ export const Route = createFileRoute("/")({
 
 const proofPoints = [
   "Beginner Friendly Course in Hindi",
-  "Complete Guidence",
+  "Complete Guidance",
   "Lifetime Course Access",
   "Free Meta ads Course",
   "Focused on making consistent income ",
@@ -133,13 +135,29 @@ const modules: { num: string; title: string }[] = [
 ];
 
 const faqs: { q: string; a: string }[] = [
-  { q: "Can beginners join?", a: "Yes. The course starts from the basics and assumes no prior experience." },
-  { q: "Do I need coding knowledge?", a: "No. Every concept is taught using AI-powered, no-code workflows." },
-  { q: "Will I build real apps?", a: "Yes. You build working Android apps as you move through the modules." },
-  { q: "Is mentorship on a course?", a: "Yes. You get live 1-to-1 guidance throughout the learning process." },
   {
-    q: "Will I receive future updates?",
-    a: "You get lifetime access to the course material. Whenever a module is updated, the updated version is available inside your existing access.",
+    q: "How long is the course?",
+    a: "The complete course is around 3–4 hours long and is structured step by step, so you can learn at your own pace.",
+  },
+  {
+    q: "Which AI tools will I need?",
+    a: "The course focuses on free AI tools. You do not need to buy paid tools to follow the complete workflow.",
+  },
+  {
+    q: "Is there any upsell or additional charge?",
+    a: "No. There is only one single payment for lifetime access. No hidden charges and no compulsory upsells.",
+  },
+  {
+    q: "Can I resell this course?",
+    a: "Yes, resale is possible with a license. DM me on WhatsApp to ask about the resale license.",
+  },
+  {
+    q: "What is the course language?",
+    a: "The course is in Hindi, and everything is explained practically and step by step.",
+  },
+  {
+    q: "What if I get stuck?",
+    a: "DM me on WhatsApp and I'll personally help you. Support is available 24/5.",
   },
 ];
 
@@ -291,6 +309,45 @@ function Landing() {
         </div>
       </Section>
 
+      {/* Real student feedback */}
+      <StudentFeedback />
+
+      {/* Founder */}
+      <Section id="founder">
+        <Reveal>
+          <div className="surface-card grid gap-6 p-8 sm:p-10 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center">
+            <div className="min-w-0">
+              <p className="text-xs font-semibold tracking-[0.2em] text-primary-glow uppercase">
+                Learn directly from the person building with AI.
+              </p>
+              <h2 className="mt-4 text-2xl font-bold sm:text-3xl">Hey, I'm Nikhil.</h2>
+              <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+                I'm a software developer from Madhya Pradesh. I created this course to show
+                beginners how to build practical Android apps with AI—step by step, without needing
+                a coding background. You'll learn the exact workflow I use, with personal guidance
+                when you need it.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-2.5">
+                {[
+                  "Practical, beginner-friendly learning",
+                  "Hindi step-by-step explanations",
+                  "Direct WhatsApp support from me",
+                ].map((point) => (
+                  <span
+                    key={point}
+                    className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-medium glass sm:text-sm"
+                  >
+                    <Check className="h-4 w-4 shrink-0 text-success" />
+                    {point}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <EnrollButton label="Start Learning With Me" className="w-full lg:w-auto" />
+          </div>
+        </Reveal>
+      </Section>
+
       {/* Double refund guarantee */}
       <Section id="guarantee">
         <Reveal>
@@ -299,8 +356,8 @@ function Landing() {
             <Star className="mx-auto h-8 w-8 text-primary-glow" />
             <h2 className="mt-6 text-3xl font-bold sm:text-5xl">Double Refund Guarantee</h2>
             <p className="mx-auto mt-5 max-w-2xl text-base text-muted-foreground">
-              Build and launch a real app within your first 3 months. If you don't feel the course
-              delivered value, we'll refund 2x your investment — no questions asked*.
+              Build and launch a real app within your first 3 months. If the course didn't deliver
+              value for you, we'll refund 2x your investment — subject to the conditions below*.
             </p>
           </div>
         </Reveal>
@@ -314,7 +371,7 @@ function Landing() {
             <span className="block text-gradient">Start Building Real Apps.</span>
           </h2>
         </Reveal>
-        <div className="mt-10 grid gap-5 md:grid-cols:3">
+        <div className="mt-10 grid gap-5 md:grid-cols-3">
           {[
             {
               title: "No experience needed",
@@ -348,7 +405,7 @@ function Landing() {
               <Video className="h-3.5 w-3.5 text-primary-glow" />
               Complete Mentorship
             </span>
-            <h2 className="mt-6 max-w-2xl text-3xl font-bold sm:text-4xl">24/7 Guidance by Founder himself.</h2>
+            <h2 className="mt-6 max-w-2xl text-3xl font-bold sm:text-4xl">Get guidance directly from the founder.</h2>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {[
                 "You'll receive personal guidance throughout the learning process.",
@@ -570,6 +627,8 @@ function Landing() {
           <EnrollButton />
         </div>
       </div>
+
+      <WhatsAppButton />
     </div>
   );
 }
