@@ -9,6 +9,8 @@ import {
 import { EnrollButton } from "@/components/EnrollButton";
 import { Reveal } from "@/components/Reveal";
 import { COURSE_PRICE_INR } from "@/lib/checkout";
+import { trackMeta } from "@/lib/meta-tracking";
+
 import heroBg from "@/assets/hero-bg.jpg";
 import {
   Smartphone,
