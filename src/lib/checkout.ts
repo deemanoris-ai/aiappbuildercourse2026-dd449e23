@@ -1,6 +1,8 @@
 import { createRazorpayOrder, verifyRazorpayPayment } from "./razorpay.functions";
+import { trackMeta } from "./meta-tracking";
 
 export const COURSE_PRICE_INR = 1999;
+
 
 declare global {
   interface Window {
@@ -23,7 +25,16 @@ function loadRazorpayScript(): Promise<void> {
 export async function startCheckout(onSuccess: (paymentId: string) => void, onError: (message: string) => void) {
   try {
     await loadRazorpayScript();
+
+    // User is entering the payment flow — not a purchase yet.
+    void trackMeta("InitiateCheckout", {
+      value: COURSE_PRICE_INR,
+      currency: "INR",
+      contentName: "AI App Builder Course",
+    });
+
     const order = await createRazorpayOrder();
+
 
     const rzp = new window.Razorpay!({
       key: order.keyId,
@@ -40,10 +51,18 @@ export async function startCheckout(onSuccess: (paymentId: string) => void, onEr
       }) => {
         try {
           const result = await verifyRazorpayPayment({ data: response });
+          // Fired only after the backend verified the Razorpay signature.
+          void trackMeta("Purchase", {
+            value: COURSE_PRICE_INR,
+            currency: "INR",
+            contentName: "AI App Builder Course",
+            eventId: `purchase_${result.paymentId}`,
+          });
           onSuccess(result.paymentId);
         } catch {
           onError("We could not verify your payment. Please contact support.");
         }
+
       },
       modal: { ondismiss: () => onError("Payment cancelled.") },
     });

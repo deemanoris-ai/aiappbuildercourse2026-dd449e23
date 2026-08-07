@@ -9,6 +9,8 @@ import {
 import { EnrollButton } from "@/components/EnrollButton";
 import { Reveal } from "@/components/Reveal";
 import { COURSE_PRICE_INR } from "@/lib/checkout";
+import { trackMeta } from "@/lib/meta-tracking";
+
 import heroBg from "@/assets/hero-bg.jpg";
 import {
   Smartphone,
@@ -152,11 +154,20 @@ function Landing() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    void trackMeta("ViewContent", {
+      value: COURSE_PRICE_INR,
+      currency: "INR",
+      contentName: "AI App Builder Course",
+    });
+  }, []);
+
+  useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
 
   return (
     <div className="min-h-screen overflow-x-hidden pb-24 md:pb-0">
