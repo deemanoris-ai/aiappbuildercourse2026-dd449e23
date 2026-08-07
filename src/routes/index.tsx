@@ -371,7 +371,7 @@ function Landing() {
             <span className="block text-gradient">Start Building Real Apps.</span>
           </h2>
         </Reveal>
-        <div className="mt-10 grid gap-5 md:grid-cols:3">
+        <div className="mt-10 grid gap-5 md:grid-cols-3">
           {[
             {
               title: "No experience needed",
