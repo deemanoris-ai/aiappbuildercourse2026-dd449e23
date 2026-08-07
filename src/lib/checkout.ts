@@ -25,7 +25,16 @@ function loadRazorpayScript(): Promise<void> {
 export async function startCheckout(onSuccess: (paymentId: string) => void, onError: (message: string) => void) {
   try {
     await loadRazorpayScript();
+
+    // User is entering the payment flow — not a purchase yet.
+    void trackMeta("InitiateCheckout", {
+      value: COURSE_PRICE_INR,
+      currency: "INR",
+      contentName: "AI App Builder Course",
+    });
+
     const order = await createRazorpayOrder();
+
 
     const rzp = new window.Razorpay!({
       key: order.keyId,
