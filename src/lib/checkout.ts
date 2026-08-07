@@ -1,7 +1,8 @@
 import { createRazorpayOrder, verifyRazorpayPayment } from "./razorpay.functions";
 import { trackMeta } from "./meta-tracking";
+import { CHECKOUT_ERROR_MESSAGE } from "./site-config";
 
-export const COURSE_PRICE_INR = 1999;
+export const COURSE_PRICE_INR = 199;
 
 
 declare global {
@@ -69,6 +70,7 @@ export async function startCheckout(onSuccess: (paymentId: string) => void, onEr
 
     rzp.open();
   } catch (error) {
-    onError(error instanceof Error ? error.message : "Something went wrong.");
+    console.error("Checkout failed", error);
+    onError(CHECKOUT_ERROR_MESSAGE);
   }
 }
