@@ -51,10 +51,18 @@ export async function startCheckout(onSuccess: (paymentId: string) => void, onEr
       }) => {
         try {
           const result = await verifyRazorpayPayment({ data: response });
+          // Fired only after the backend verified the Razorpay signature.
+          void trackMeta("Purchase", {
+            value: COURSE_PRICE_INR,
+            currency: "INR",
+            contentName: "AI App Builder Course",
+            eventId: `purchase_${result.paymentId}`,
+          });
           onSuccess(result.paymentId);
         } catch {
           onError("We could not verify your payment. Please contact support.");
         }
+
       },
       modal: { ondismiss: () => onError("Payment cancelled.") },
     });
