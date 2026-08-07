@@ -1,6 +1,8 @@
 import { createRazorpayOrder, verifyRazorpayPayment } from "./razorpay.functions";
+import { trackMeta } from "./meta-tracking";
 
 export const COURSE_PRICE_INR = 1999;
+
 
 declare global {
   interface Window {
