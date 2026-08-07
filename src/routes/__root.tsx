@@ -18,7 +18,6 @@ import { META_PIXEL_ID, metaPixelBaseScript } from "@/lib/meta-pixel";
 import { trackMeta } from "@/lib/meta-tracking";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
-import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
   return (
