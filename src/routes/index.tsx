@@ -60,7 +60,7 @@ export const Route = createFileRoute("/")({
 });
 
 const proofPoints = [
-  "Beginner Friendly Course in Hindi",
+  "Beginner Friendly Course in Hindi.",
   "Complete Guidance",
   "Lifetime Course Access",
   "Free Meta ads Course",
