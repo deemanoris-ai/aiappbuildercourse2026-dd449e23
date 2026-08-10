@@ -16,7 +16,7 @@ export const createRazorpayOrder = createServerFn({ method: "POST" }).handler(as
       Authorization: `Basic ${btoa(`${keyId}:${keySecret}`)}`,
     },
     body: JSON.stringify({
-      amount: 1999 * 100,
+      amount: 999 * 100,
       currency: "INR",
       notes: { product: "AI App Builder Course" },
     }),
