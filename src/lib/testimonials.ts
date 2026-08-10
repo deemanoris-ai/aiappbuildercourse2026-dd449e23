@@ -12,15 +12,15 @@ export type FeedbackScreenshot = { src: string; alt: string };
 
 export const feedbackScreenshots: FeedbackScreenshot[] = [
   {
-    src: (testimonial1).url,
+    src: testimonial1,
     alt: "Student feedback message 1"
   },
   {
-    src: (testimonial2).url,
+    src: testimonial2,
     alt: "Student feedback message 2"
   },
   {
-    src: (testimonial3).url,
+    src: testimonial3,
     alt: "Student feedback message 3"
   }
 ];
