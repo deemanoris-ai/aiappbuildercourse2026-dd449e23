@@ -1,6 +1,6 @@
-import testimonial1 from "@/assets/testimonial-1.jpg.asset.json";
-import testimonial2 from "@/assets/testimonial-2.jpg.asset.json";
-import testimonial3 from "@/assets/testimonial-3.jpg.asset.json";
+import testimonial1 from "@/assets/testimonial-1.jpg";
+import testimonial2 from "@/assets/testimonial-2.jpg";
+import testimonial3 from "@/assets/testimonial-3.jpg";
 
 /**
  * Real student feedback screenshots (portrait format).
@@ -12,15 +12,15 @@ export type FeedbackScreenshot = { src: string; alt: string };
 
 export const feedbackScreenshots: FeedbackScreenshot[] = [
   {
-    src: (testimonial1 as any).url,
+    src: (testimonial1).url,
     alt: "Student feedback message 1"
   },
   {
-    src: (testimonial2 as any).url,
+    src: (testimonial2).url,
     alt: "Student feedback message 2"
   },
   {
-    src: (testimonial3 as any).url,
+    src: (testimonial3).url,
     alt: "Student feedback message 3"
   }
 ];
