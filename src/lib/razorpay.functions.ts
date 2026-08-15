@@ -4,6 +4,7 @@ import { z } from "zod";
 
 
 
+
 export const createRazorpayOrder = createServerFn({ method: "POST" }).handler(async () => {
   const keyId = process.env["RAZORPAY_KEY_ID"];
   const keySecret = process.env["RAZORPAY_KEY_SECRET"];
@@ -16,7 +17,7 @@ export const createRazorpayOrder = createServerFn({ method: "POST" }).handler(as
       Authorization: `Basic ${btoa(`${keyId}:${keySecret}`)}`,
     },
     body: JSON.stringify({
-      amount: 999 * 100,
+      amount: 199 * 100,
       currency: "INR",
       notes: { product: "AI App Builder Course" },
     }),
