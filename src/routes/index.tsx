@@ -249,6 +249,17 @@ function Landing() {
               <span>351+ students enrolled</span>
             </div>
           </Reveal>
+          <Reveal delay={140}>
+            <div className="mx-auto mt-6 w-full max-w-3xl overflow-hidden rounded-3xl border border-border bg-black/5 shadow-sm aspect-video">
+              <iframe
+                className="h-full w-full"
+                src="https://www.youtube.com/embed/5EbCUzs6QQI"
+                title="AI App Builder Course Preview"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+          </Reveal>
           <Reveal delay={160}>
             <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
               Learn step-by-step how to build, publish and monetize Android apps using AI tools—even
