@@ -50,7 +50,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "A practical 2–3 hour AI app building course with personal guidance, no hidden charges and a double money-back guarantee.*",
+          "A practical 2–3 hour AI app building course with expert guidance, no hidden charges and a double money-back guarantee.*",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -64,7 +64,7 @@ const proofPoints = [
   "2–3 Hours · Practical Learning",
   "Build Your First App in 1 Day*",
   "No Hidden Charges or Upsells",
-  "24/5 Personal Help & Guidance",
+  "24/5 Expert Help & Guidance",
 ];
 
 const learnItems = [
@@ -197,7 +197,7 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "Kya support milega?",
-    a: "Haan. 24/5 personal help, support aur guidance available hai. Aap stuck ho to personally help ke liye contact kar sakte ho.",
+    a: "Haan. 24/5 expert help, support aur guidance available hai. Aap stuck ho to personally help ke liye contact kar sakte ho.",
   },
   {
     q: "Double money-back guarantee kya hai?",
@@ -264,7 +264,7 @@ function Landing() {
           <Reveal>
             <span className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-1.5 text-xs font-medium tracking-wide text-muted-foreground glass">
               <Video className="h-3.5 w-3.5 text-primary-glow" />
-              Complete Mentorship · 24/5 Support
+              Expert Guidance · 24/5 Support
             </span>
           </Reveal>
           <Reveal delay={80}>
@@ -335,7 +335,7 @@ function Landing() {
         <Reveal delay={120}>
           <div className="mt-8 rounded-3xl border border-primary/30 p-6 text-center glass sm:p-8">
             <p className="text-lg font-semibold sm:text-xl">2–3 Hour Course · Hindi + English · No Coding · No Hidden Charges · No Compulsory Upsell</p>
-            <p className="mt-2 text-sm text-muted-foreground">Aur jab aap stuck ho, 24/5 personal help, support aur guidance directly from me.</p>
+            <p className="mt-2 text-sm text-muted-foreground">Aur jab aap stuck ho, 24/5 expert help, support aur guidance directly from me.</p>
           </div>
         </Reveal>
       </Section>
@@ -349,10 +349,10 @@ function Landing() {
               <p className="text-xs font-semibold tracking-[0.2em] text-primary-glow uppercase">Learn directly from the person building with AI.</p>
               <h2 className="mt-4 text-2xl font-bold sm:text-3xl">Hey, I'm Nikhil.</h2>
               <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-                Main ye course isliye banaya hai taaki beginners bhi AI ka use karke practical apps build kar sakein. Main personally aapko guide karunga jab bhi aap stuck ho.
+                Main ye course isliye banaya hai taaki beginners bhi AI ka use karke practical apps build kar sakein. Main personally aapko expert guidance dunga jab bhi aap stuck ho.
               </p>
               <div className="mt-6 flex flex-wrap gap-2.5">
-                {["Hindi + English learning", "24/5 personal help", "Step-by-step guidance"].map((point) => (
+                {["Hindi + English learning", "24/5 expert help", "Step-by-step guidance"].map((point) => (
                   <span key={point} className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-medium glass sm:text-sm">
                     <Check className="h-4 w-4 shrink-0 text-success" />
                     {point}
@@ -386,7 +386,7 @@ function Landing() {
           {[
             { title: "No Coding Needed", text: "Coding experience nahi hai? No problem. AI-assisted workflow scratch se follow karo." },
             { title: "2–3 Hours, Practical", text: "Short, focused course jisme theory se zyada actual app-building workflow par focus hai." },
-            { title: "Personal Guidance", text: "Aap stuck ho to 24/5 personal help, support aur guidance directly from me." },
+            { title: "Expert Guidance", text: "Aap stuck ho to 24/5 expert help, support aur guidance directly from me." },
           ].map((item, i) => (
             <Reveal key={item.title} delay={i * 90}>
               <div className="h-full surface-card p-7">
@@ -402,10 +402,10 @@ function Landing() {
         <Reveal>
           <div className="surface-card relative overflow-hidden p-8 sm:p-14">
             <div className="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full bg-[image:var(--gradient-primary)] opacity-20 blur-3xl" />
-            <span className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-1.5 text-xs font-medium text-muted-foreground"><Video className="h-3.5 w-3.5 text-primary-glow" /> 24/5 Personal Support</span>
-            <h2 className="mt-6 max-w-2xl text-3xl font-bold sm:text-4xl">Sirf course nahi — personally guided learning.</h2>
+            <span className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-1.5 text-xs font-medium text-muted-foreground"><Video className="h-3.5 w-3.5 text-primary-glow" /> Expert Guidance</span>
+            <h2 className="mt-6 max-w-2xl text-3xl font-bold sm:text-4xl">Get expert guidance directly from the founder.</h2>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              {["24/5 personal help & support", "Hindi + English explanations", "No coding experience required", "Guidance when you're stuck"].map((line) => (
+              {["24/5 expert help & support", "Hindi + English explanations", "No coding experience required", "Guidance when you're stuck"].map((line) => (
                 <div key={line} className="flex items-start gap-3 rounded-2xl p-4 glass">
                   <Check className="mt-0.5 h-4 w-4 shrink-0 text-success" />
                   <p className="min-w-0 text-sm leading-relaxed">{line}</p>
@@ -464,7 +464,7 @@ function Landing() {
         <SectionHead eyebrow="The difference" title="Why Choose Us" />
         <div className="mt-12 grid gap-5 lg:grid-cols-2">
           <Reveal><div className="h-full rounded-3xl border border-border p-8"><h3 className="text-xl font-semibold text-muted-foreground">Traditional Learning</h3><ul className="mt-6 space-y-4">{["Requires Coding", "Slow Learning", "Complex Setup"].map((item) => <li key={item} className="flex items-center gap-3 text-sm text-muted-foreground"><span className="grid h-7 w-7 shrink-0 place-items-center rounded-full border border-border"><X className="h-3.5 w-3.5 text-destructive" /></span>{item}</li>)}</ul></div></Reveal>
-          <Reveal delay={120}><div className="h-full surface-card glow-ring p-8"><h3 className="text-xl font-semibold">Our Course</h3><ul className="mt-6 space-y-4">{["AI Powered", "Beginner Friendly", "Hindi + English", "24/5 Personal Guidance", "Real App Building", "No Hidden Upsell"].map((item) => <li key={item} className="flex items-center gap-3 text-sm font-medium"><span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-[image:var(--gradient-primary)]"><Check className="h-3.5 w-3.5 text-primary-foreground" /></span>{item}</li>)}</ul><div className="mt-8"><EnrollButton /></div></div></Reveal>
+          <Reveal delay={120}><div className="h-full surface-card glow-ring p-8"><h3 className="text-xl font-semibold">Our Course</h3><ul className="mt-6 space-y-4">{["AI Powered", "Beginner Friendly", "Hindi + English", "24/5 Expert Guidance", "Real App Building", "No Hidden Upsell"].map((item) => <li key={item} className="flex items-center gap-3 text-sm font-medium"><span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-[image:var(--gradient-primary)]"><Check className="h-3.5 w-3.5 text-primary-foreground" /></span>{item}</li>)}</ul><div className="mt-8"><EnrollButton /></div></div></Reveal>
         </div>
       </Section>
 
@@ -479,7 +479,7 @@ function Landing() {
             <div className="pointer-events-none absolute inset-x-0 -top-32 h-64 bg-[radial-gradient(50%_100%_at_50%_100%,color-mix(in_oklab,var(--primary)_35%,transparent),transparent)]" />
             <BookOpen className="mx-auto h-8 w-8 text-primary-glow" />
             <h2 className="mt-6 text-3xl font-bold sm:text-5xl">Ready to Build Your First App?</h2>
-            <p className="mx-auto mt-5 max-w-xl text-base text-muted-foreground">2–3 hours. Hindi + English. No coding. No hidden charges. Plus personal 24/5 help and guidance.</p>
+            <p className="mx-auto mt-5 max-w-xl text-base text-muted-foreground">2–3 hours. Hindi + English. No coding. No hidden charges. Plus personal 24/5 expert help and guidance.</p>
             <div className="mt-9 flex flex-col items-center gap-3"><EnrollButton size="lg" className="w-full sm:w-auto" /><p className="text-sm text-muted-foreground">One-time payment · ₹{COURSE_PRICE_INR} · Lifetime access</p></div>
           </div>
         </Reveal>
@@ -495,7 +495,7 @@ function Landing() {
 
       <div className="border-t border-border px-5 py-5"><p className="mx-auto max-w-6xl text-center text-xs leading-relaxed text-muted-foreground">*1-day app building and double money-back guarantee are subject to the stated course/refund conditions and individual effort. See the Refund Policy for full eligibility terms.</p></div>
 
-      <div className="fixed inset-x-0 bottom-0 z-50 border-t border-border p-3 md:hidden glass"><div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3"><div className="min-w-0"><p className="truncate text-sm font-semibold">₹{COURSE_PRICE_INR} · Lifetime access</p><p className="truncate text-xs text-muted-foreground">24/5 personal guidance included</p></div><EnrollButton /></div></div>
+      <div className="fixed inset-x-0 bottom-0 z-50 border-t border-border p-3 md:hidden glass"><div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3"><div className="min-w-0"><p className="truncate text-sm font-semibold">₹{COURSE_PRICE_INR} · Lifetime access</p><p className="truncate text-xs text-muted-foreground">24/5 expert guidance included</p></div><EnrollButton /></div></div>
       <WhatsAppButton />
     </div>
   );
